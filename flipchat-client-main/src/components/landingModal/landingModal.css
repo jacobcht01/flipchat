@@ -1,0 +1,158 @@
+.landingModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingModal-content {
+    width: 500px;
+    padding: 3rem 3rem 4rem;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.landingModal-header {
+    width: 100%;
+    text-align: right;
+    padding: 0.45rem 0;
+}
+
+.landingModal-header-icon {
+    cursor: pointer;
+}
+
+.landingModal-title {
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.landingModal-para {
+    font-size: 1.4rem;
+    color: var(--color-black-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.landingModal-highlight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.landingModal-highlight-image {
+    width: 3.2rem;
+    margin-right: 1rem;
+}
+
+.landingModal-highlight-text {
+    font-size: 2.5rem;
+}
+
+.landingModal-highlight-copy {
+    margin-left: 2.5em;
+    cursor: pointer;
+}
+
+.landingModal-premium {
+    width: 100%;
+    padding: 3rem 2rem;
+    border: 2px solid var(--color-green-primary);
+    background-color: var(--color-green-light);
+    border-radius: 8px;
+}
+
+.landingModal-premium-para {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.landingModal-features {
+    width: 100%;
+}
+
+.landingModal-features-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.75rem;
+}
+.feature-many-more {
+    display: none;
+}
+
+.landingModal-features-item-icon {
+    margin-right: 0.6rem;
+}
+
+.landingModal-features-item-para {
+    font-size: 1.4rem;
+}
+
+.landingModal-premium-cta {
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--color-black-secondary);
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 786px) {
+    .landingModal-content {
+        width: 85%;
+        padding: 3rem 3rem 3rem;
+    }
+    .landingModal-title {
+        margin-bottom: 1rem;
+    }
+    .landingModal-para {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    .landingModal-highlight {
+        margin-bottom: 1.5rem;
+    }
+    .landingModal-highlight-image {
+        width: 2.5rem;
+    }
+    .landingModal-highlight-text {
+        font-size: 2rem;
+    }
+    .landingModal-features-item {
+        margin-bottom: 1.25rem;
+    }
+    .landingModal-premium {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .landingModal-features-item:nth-child(3),
+    .landingModal-features-item:nth-child(4),
+    .landingModal-features-item:nth-child(5) {
+        display: none;
+    }
+    .feature-many-more {
+        display: flex;
+    }
+    .landingModal-premium-cta {
+        font-size: 1.25rem;
+    }
+    .landingModal-highlight-image {
+        width: 1.5rem;
+    }
+
+    .landingModal-highlight-text {
+        font-size: 1.45rem;
+    }
+    .landingModal-highlight-copy {
+        width: 1.5rem;
+    }
+}
