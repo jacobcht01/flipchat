@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    DEPLOY_KEY: "ec2-private-key"
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo "Build completed"
+  post_build:
+    commands:
+      - echo "$DEPLOY_KEY" > ec2-key.pem  # Save private key to a file
+      - chmod 400 ec2-key.pem
+      - scp -o StrictHostKeyChecking=no -i ec2-key.pem -r * ubuntu@3.110.90.180:/home/ubuntu/your-app
+      - ssh -o StrictHostKeyChecking=no -i ec2-key.pem ubuntu@y3.110.90.180 "
+          cd /home/ubuntu/flipchat-server-main/ &&
+          npm install &&
+          pm2 restart node-app || pm2 start server.js --name node-app"
