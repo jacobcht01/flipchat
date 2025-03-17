@@ -1,0 +1,226 @@
+.animationContainer {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.animationLink {
+    font-size: 2rem;
+    position: absolute;
+    top: calc(50% - 13px);
+    left: -125px;
+    z-index: 50;
+    word-break: break-all;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.animationLink:hover {
+    color: var(--color-blue-primary);
+}
+
+.animationIcon {
+    position: absolute;
+    top: calc(50% - 21px);
+    left: 110px;
+    width: 60px;
+    height: auto;
+    z-index: 20;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-green-light);
+    border-radius: 50%;
+}
+
+.chat-vector {
+    width: 100%;
+}
+
+.animationIcon::before,
+.animationIcon::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.animationIcon::before {
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.animationPaths {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke: #000;
+    stroke-width: 0.5;
+    width: 450px;
+    z-index: 1;
+}
+
+.animationItems {
+    position: absolute;
+    top: calc(50% - 195px);
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animationItem {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+    padding: 5px 10px;
+    color: #000;
+    opacity: 0.4;
+    text-align: center;
+    border: 1px solid var(--color-green-primary);
+    border-radius: 8px;
+}
+
+.animationItem-text {
+    font-size: 1.8rem;
+}
+
+.animationItem-image {
+    width: 35px;
+    margin-right: 1rem;
+}
+
+.animationCard {
+    min-width: 320px;
+    /* margin: 1rem; */
+    flex-basis: 45%;
+    padding: 0 1rem;
+    text-align: left;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
+}
+
+.animationIcon {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+.animationIcon {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+.howItWorksCard {
+    display: none;
+    padding: 0 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .animationCard {
+        display: none;
+    }
+
+    .howItWorksCard {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .animationContainer {
+        height: 400px;
+    }
+
+    .animationPaths {
+        width: 350px;
+        left: 50px;
+        top: 30px;
+    }
+
+    .animationItems {
+        top: calc(50% - 150px);
+    }
+
+    .animationItem {
+        margin: 25px 0;
+    }
+
+    .animationIcon {
+        left: 120px;
+        width: 55px;
+    }
+
+    .animationLink {
+        font-size: 1.75rem;
+        left: -85px;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .animationPaths {
+        width: 250px;
+        left: 110px;
+    }
+
+    .animationIcon {
+        left: 150px;
+        top: 130px;
+        width: 50px;
+    }
+
+    .animationContainer {
+        height: 340px;
+        width: 100%;
+    }
+
+    .animationItem-image {
+        width: 20px;
+    }
+
+    .animationItem-text {
+        font-size: 1.5rem;
+    }
+
+    .animationItems {
+        right: 0px;
+        top: calc(50% - 135px);
+    }
+
+    .animationItem {
+        margin: 20px 0;
+    }
+
+    .animationLink {
+        font-size: 1.25rem;
+        left: 0px;
+        top: 145px;
+    }
+}
